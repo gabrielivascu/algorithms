@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void merge(int *v, int left, int mid, int right, int *buff)
+static void merge(int *v, int left, int mid, int right, int *buff)
 {
   /* The pointer to iterate through the first array. */
   int i = left;
@@ -32,7 +32,7 @@ void merge(int *v, int left, int mid, int right, int *buff)
     v[k] = buff[k - left];
 }
 
-void mergesort_helper(int *v, int left, int right, int *buff)
+static void mergesort_helper(int *v, int left, int right, int *buff)
 {
   int mid;
 
@@ -51,7 +51,7 @@ void mergesort_helper(int *v, int left, int right, int *buff)
   merge(v, left, mid, right, buff);
 }
 
-void mergesort(int *v, int left, int right)
+static void mergesort(int *v, int left, int right)
 {
   int *buff;
 
