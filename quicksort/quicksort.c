@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int partition(int *v, int left, int right)
+static int partition(int *v, int left, int right)
 {
   int pivot, tmp;
   int i = left + 1;
@@ -33,7 +33,7 @@ int partition(int *v, int left, int right)
   return j;
 }
 
-void quicksort(int *v, int left, int right)
+static void quicksort(int *v, int left, int right)
 {
   int pivot;
 
